@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
+/* //////////RESET\\\\\\\\\\ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ///////////////VARIABLES\\\\\\\\\\\\\\\ */ 
+
+:root {
+    /* BORDERS */
+    --CT-BORDER-RADIUS: 20px;
+    --CT-BORDER: 7px solid #ffffff;
+    --IMG-BORDER-RADIUS: 10px;
+
+    /* COLORS */
+    --ANYLINK-COLOR: #0000ff;
+    --BODY-BGCOLOR: #d6e2f0;
+    --BOX-COLOR: #a09797;
+    --CT-BGCOLOR: #ffffff;
+    --DIV-COLOR:  #1f3251;
+    --HOVER-ACTIVE-COLOR: #800080;
+
+    /* FONTS */
+    --BOX-FS: 20px;
+    --DIV-FS: 1.9rem;
+    --DIV-FW: bold;
+    --FOOTER-FS: 1.5rem;
+
+    /* margin */
+    --BOX-MARGIN: 1.5rem 0 3rem 0;
+    --CT-MARGIN: 4rem auto;
+    --IMG-MARGIN: 0 auto;
+
+    /* STANDARD PADDING */
+    --BOX-1-PADDING: 0 0 0 2rem;
+    --BOX-2-PADDING: 0 0 0 1.5rem;
+    --DIV-H1-PADDING: 0 0 0 1rem;
+    --DIV-H2-PADDING: 0 0 0 0.5rem;
+    --FIGURE-PADDING: 0.5rem 0 0 0;
+
+    /* Width & height */
+    --BODY-H:  50%;
+    --BODY-MAXW: 1440px;
+    --CT-MW: 370px;
+    --FIGURE-HEIGHT: auto;
+    --FIGURE-MH: 100%;
+    --FIGURE-WIDTH: 100%;    
+    --IMG-WIDTH: 350px;
+}
+
+/* ///////////////GENERAL STYLES\\\\\\\\\\\\\\\ */
+
+/* //////////The commented html and body styles
+ are based on prefrence and you might want to use them together \\\\\\\\\\ */
+
+/* html {   
+    background-color: #1f3251;
+} */
+
+/* 
+body {
+    background-color:  #d6e2f0;
+    max-width: 1440px;
+    height: 50%;
+    display: grid;
+    box-shadow: 0 0 10px 0 black;
+    margin: 10rem 5rem 10rem 5rem;
+} */
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    display: grid;
+    height: var(--BODY-H);
+    max-width: var(--BODY-MAXW);
+}
+
+.container {
+    background-color: var(--CT-BGCOLOR);
+    border-radius: var(--CT-BORDER-RADIUS);
+    border: var(--CT-BORDER);
+    display: grid;
+    justify-content: center;
+    margin: var(--CT-MARGIN);
+    min-width: var(--CT-MW);
+}
+
+figure {
+    height: var(--FIGURE-HEIGHT);
+    min-height: var(--FIGURE-MH); 
+    padding: var(--FIGURE-PADDING);
+    width: var(--FIGURE-WIDTH);  
+}
+
+img {
+    border-radius: var(--IMG-BORDER-RADIUS);
+    display: block;
+    justify-content: center;
+    margin: var(--IMG-MARGIN);
+    width: var(--IMG-WIDTH);
+}
+
+.div__h1 {
+    color:  var(--DIV-COLOR);
+    font-size: var(--DIV-FS);
+    font-weight: var(--DIV-FW);
+    padding: var(--DIV-H1-PADDING);
+}
+
+.div__h2 {
+    color: var(--DIV-COLOR);
+    font-size: var(--DIV-FS);
+    font-weight: var(--DIV-FW);
+    padding: var(--DIV-H2-PADDING);
+}
+
+.box {
+    color: var(--BOX-COLOR);
+    font-size: var(--BOX-FS);
+    margin: var(--BOX-MARGIN);
+}
+
+.box1 {
+    padding: var(--BOX-1-PADDING);
+}
+
+.box2 {
+    padding: var(--BOX-2-PADDING);
+}
+
+.box3 {
+    text-align: center;
+}
+
+footer {
+    font-size: var(--FOOTER-FS);
+}
+
+a:any-link {
+    color: var(--ANYLINK-COLOR);
+}
+a:hover,a:active {
+    color: var(--HOVER-ACTIVE-COLOR);
+}
+
+/* ///////////////MEDIA QUERIES\\\\\\\\\\\\\\\ */
+
+/* //////////VARIABLES\\\\\\\\\\ */
+
+:root {
+      /* Width & height */
+      --MEDIA-BODY-MAXW: 375px;
+  
+      /* margin */
+      --MEDIA-CT-MARGIN: 1rem auto;
+}
+
+/* //////////GENERAL STYLES\\\\\\\\\\ */
+
+@media screen and (max-width: 576px)  {
+    body {
+        box-shadow: none;
+        max-width: var(--MEDIA-BODY-MAXW);
+    }
+
+    .container {
+        margin: var(--MEDIA-CT-MARGIN);
+    }
+}
