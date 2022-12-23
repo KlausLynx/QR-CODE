@@ -25,15 +25,18 @@
     --HOVER-ACTIVE-COLOR: #800080;
 
     /* FONTS */
+    --BODY-FF: "Nunito", "Fugaz One", sans-serif;
     --BOX-FS: 20px;
     --DIV-FS: 1.9rem;
     --DIV-FW: bold;
     --FOOTER-FS: 1.5rem;
 
     /* margin */
-    --BOX-MARGIN: 1.5rem 0 3rem 0;
+    --BOX-MARGIN: 1.2rem 0 3rem 1rem;
     --CT-MARGIN: 4rem auto;
-    --IMG-MARGIN: 0 auto;
+    --IMG-MARGIN: 0.5rem auto 0 auto;
+    --SHIFT-MARGIN: 0 1.5rem 0 2rem;
+    --SPACE-MARGIN: 0 1.5rem 0 1.5rem;
 
     /* STANDARD PADDING */
     --BOX-1-PADDING: 0 0 0 2rem;
@@ -76,6 +79,7 @@ body {
     display: grid;
     height: var(--BODY-H);
     max-width: var(--BODY-MAXW);
+    font-family: var(--BODY-FF);
 }
 
 .container {
@@ -103,18 +107,12 @@ img {
     width: var(--IMG-WIDTH);
 }
 
-.div__h1 {
-    color:  var(--DIV-COLOR);
-    font-size: var(--DIV-FS);
-    font-weight: var(--DIV-FW);
-    padding: var(--DIV-H1-PADDING);
+.shift {
+    margin: var(--SHIFT-MARGIN);
 }
 
-.div__h2 {
-    color: var(--DIV-COLOR);
-    font-size: var(--DIV-FS);
-    font-weight: var(--DIV-FW);
-    padding: var(--DIV-H2-PADDING);
+.space {
+    margin: var(--SPACE-MARGIN);
 }
 
 .box {
@@ -156,6 +154,8 @@ a:hover,a:active {
   
       /* margin */
       --MEDIA-CT-MARGIN: 1rem auto;
+      --MEDIA-SHIFT-MARGIN: 0;
+      --MEDIA-SPACE-MARGIN: 0;
 }
 
 /* //////////GENERAL STYLES\\\\\\\\\\ */
@@ -169,4 +169,13 @@ a:hover,a:active {
     .container {
         margin: var(--MEDIA-CT-MARGIN);
     }
+
+    .shift {
+        margin: var(--MEDIA-SHIFT-MARGIN);
+    }
+    
+    .space {
+        margin: var(--MEDIA-SPACE-MARGIN);
+    }
+
 }
